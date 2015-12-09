@@ -10,7 +10,7 @@
 		C8340FEF1C15BB82000DF6CD /* ModalActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FEE1C15BB82000DF6CD /* ModalActivityIndicator.swift */; };
 		C8340FF11C15C0AF000DF6CD /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF01C15C0AF000DF6CD /* Timer.swift */; };
 		C8340FF31C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */; };
-		C8C90DC21C11AD6A00FE924E /* MDKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C8C90DC01C11AD6A00FE924E /* MDKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8C90DC21C11AD6A00FE924E /* Doctor.h in Headers */ = {isa = PBXBuildFile; fileRef = C8C90DC01C11AD6A00FE924E /* Doctor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8C90DDE1C11AD6F00FE924E /* Array+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC41C11AD6F00FE924E /* Array+Sample.swift */; };
 		C8C90DDF1C11AD6F00FE924E /* CGContext+InnerShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC51C11AD6F00FE924E /* CGContext+InnerShadow.swift */; };
 		C8C90DE01C11AD6F00FE924E /* CGContext+RoundedRects.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC61C11AD6F00FE924E /* CGContext+RoundedRects.swift */; };
@@ -50,7 +50,7 @@
 		C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BrightFutures+ErrorConversion.swift"; sourceTree = "<group>"; };
 		C8C90DB41C11AD4300FE924E /* Doctor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Doctor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C90DBF1C11AD6A00FE924E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8C90DC01C11AD6A00FE924E /* MDKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDKit.h; sourceTree = "<group>"; };
+		C8C90DC01C11AD6A00FE924E /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
 		C8C90DC41C11AD6F00FE924E /* Array+Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Sample.swift"; sourceTree = "<group>"; };
 		C8C90DC51C11AD6F00FE924E /* CGContext+InnerShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+InnerShadow.swift"; sourceTree = "<group>"; };
 		C8C90DC61C11AD6F00FE924E /* CGContext+RoundedRects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+RoundedRects.swift"; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			children = (
 				C8C90DC31C11AD6F00FE924E /* Code */,
 				C8C90DBF1C11AD6A00FE924E /* Info.plist */,
-				C8C90DC01C11AD6A00FE924E /* MDKit.h */,
+				C8C90DC01C11AD6A00FE924E /* Doctor.h */,
 				C8C90E061C11AE4D00FE924E /* Frameworks */,
 				C8C90DB51C11AD4300FE924E /* Products */,
 			);
@@ -245,7 +245,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8C90DC21C11AD6A00FE924E /* MDKit.h in Headers */,
+				C8C90DC21C11AD6A00FE924E /* Doctor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +456,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.mosdev.MDKit;
+				PRODUCT_BUNDLE_IDENTIFIER = co.mosdev.Doctor;
 				PRODUCT_NAME = Doctor;
 				SKIP_INSTALL = YES;
 			};
@@ -476,7 +476,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.mosdev.MDKit;
+				PRODUCT_BUNDLE_IDENTIFIER = co.mosdev.Doctor;
 				PRODUCT_NAME = Doctor;
 				SKIP_INSTALL = YES;
 			};
