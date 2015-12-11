@@ -12,6 +12,9 @@
 		C8340FF31C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */; };
 		C83680651C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83680641C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift */; };
 		C863670C1C19DA8A00AF83EF /* UIImage+SolidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C863670B1C19DA8A00AF83EF /* UIImage+SolidColor.swift */; };
+		C8A493FC1C1AE3920028D7B0 /* UIView+Bounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A493FB1C1AE3920028D7B0 /* UIView+Bounce.swift */; };
+		C8A493FE1C1AF4E10028D7B0 /* NSDate+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A493FD1C1AF4E10028D7B0 /* NSDate+JSON.swift */; };
+		C8A494001C1AF69D0028D7B0 /* NSDate+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A493FF1C1AF69D0028D7B0 /* NSDate+ISO8601.swift */; };
 		C8C90DC21C11AD6A00FE924E /* Doctor.h in Headers */ = {isa = PBXBuildFile; fileRef = C8C90DC01C11AD6A00FE924E /* Doctor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8C90DDE1C11AD6F00FE924E /* Array+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC41C11AD6F00FE924E /* Array+Sample.swift */; };
 		C8C90DDF1C11AD6F00FE924E /* CGContext+InnerShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC51C11AD6F00FE924E /* CGContext+InnerShadow.swift */; };
@@ -52,6 +55,9 @@
 		C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BrightFutures+ErrorConversion.swift"; sourceTree = "<group>"; };
 		C83680641C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
 		C863670B1C19DA8A00AF83EF /* UIImage+SolidColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+SolidColor.swift"; sourceTree = "<group>"; };
+		C8A493FB1C1AE3920028D7B0 /* UIView+Bounce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Bounce.swift"; sourceTree = "<group>"; };
+		C8A493FD1C1AF4E10028D7B0 /* NSDate+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+JSON.swift"; sourceTree = "<group>"; };
+		C8A493FF1C1AF69D0028D7B0 /* NSDate+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ISO8601.swift"; sourceTree = "<group>"; };
 		C8C90DB41C11AD4300FE924E /* Doctor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Doctor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C90DBF1C11AD6A00FE924E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8C90DC01C11AD6A00FE924E /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
@@ -103,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C8A494011C1AF6A20028D7B0 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				C8A493FD1C1AF4E10028D7B0 /* NSDate+JSON.swift */,
+				C8A493FF1C1AF69D0028D7B0 /* NSDate+ISO8601.swift */,
+			);
+			name = NSDate;
+			sourceTree = "<group>";
+		};
 		C8C90DAA1C11AD4300FE924E = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +163,7 @@
 				C8C90DC91C11AD6F00FE924E /* Growl.swift */,
 				C8340FEE1C15BB82000DF6CD /* ModalActivityIndicator.swift */,
 				C83680641C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift */,
+				C8A493FB1C1AE3920028D7B0 /* UIView+Bounce.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -168,6 +184,7 @@
 				C8C90DFD1C11ADC300FE924E /* Geometry */,
 				C8C90DFB1C11AD9500FE924E /* String */,
 				C8C90DFC1C11ADA100FE924E /* UIColor */,
+				C8A494011C1AF6A20028D7B0 /* NSDate */,
 				C8C90DCD1C11AD6F00FE924E /* NSData+Hex.swift */,
 				C8C90DD41C11AD6F00FE924E /* Sequence+Predicates.swift */,
 				C8C90DC41C11AD6F00FE924E /* Array+Sample.swift */,
@@ -323,12 +340,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8A493FE1C1AF4E10028D7B0 /* NSDate+JSON.swift in Sources */,
 				C8C90DE01C11AD6F00FE924E /* CGContext+RoundedRects.swift in Sources */,
 				C8C90DE21C11AD6F00FE924E /* CGSize+Utility.swift in Sources */,
 				C8C90DF71C11AD6F00FE924E /* WeakSet.swift in Sources */,
 				C8C90DEB1C11AD6F00FE924E /* PushHandling.swift in Sources */,
 				C8C90DF21C11AD6F00FE924E /* TextField.swift in Sources */,
 				C8C90DE41C11AD6F00FE924E /* IconButton.swift in Sources */,
+				C8A493FC1C1AE3920028D7B0 /* UIView+Bounce.swift in Sources */,
+				C8A494001C1AF69D0028D7B0 /* NSDate+ISO8601.swift in Sources */,
 				C8C90DDF1C11AD6F00FE924E /* CGContext+InnerShadow.swift in Sources */,
 				C8C90DE71C11AD6F00FE924E /* NSData+Hex.swift in Sources */,
 				C8C90DE31C11AD6F00FE924E /* Growl.swift in Sources */,
