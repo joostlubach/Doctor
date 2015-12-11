@@ -11,6 +11,7 @@
 		C8340FF11C15C0AF000DF6CD /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF01C15C0AF000DF6CD /* Timer.swift */; };
 		C8340FF31C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */; };
 		C83680651C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83680641C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift */; };
+		C863670C1C19DA8A00AF83EF /* UIImage+SolidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C863670B1C19DA8A00AF83EF /* UIImage+SolidColor.swift */; };
 		C8C90DC21C11AD6A00FE924E /* Doctor.h in Headers */ = {isa = PBXBuildFile; fileRef = C8C90DC01C11AD6A00FE924E /* Doctor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8C90DDE1C11AD6F00FE924E /* Array+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC41C11AD6F00FE924E /* Array+Sample.swift */; };
 		C8C90DDF1C11AD6F00FE924E /* CGContext+InnerShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC51C11AD6F00FE924E /* CGContext+InnerShadow.swift */; };
@@ -50,6 +51,7 @@
 		C8340FF01C15C0AF000DF6CD /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BrightFutures+ErrorConversion.swift"; sourceTree = "<group>"; };
 		C83680641C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
+		C863670B1C19DA8A00AF83EF /* UIImage+SolidColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+SolidColor.swift"; sourceTree = "<group>"; };
 		C8C90DB41C11AD4300FE924E /* Doctor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Doctor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C90DBF1C11AD6A00FE924E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8C90DC01C11AD6A00FE924E /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				C8C90DC51C11AD6F00FE924E /* CGContext+InnerShadow.swift */,
 				C8C90DC61C11AD6F00FE924E /* CGContext+RoundedRects.swift */,
+				C863670B1C19DA8A00AF83EF /* UIImage+SolidColor.swift */,
 			);
 			name = Drawing;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				C8C90DF31C11AD6F00FE924E /* UIBarButtonItem+DefaultItems.swift in Sources */,
 				C8C90DE11C11AD6F00FE924E /* CGFloat+Utility.swift in Sources */,
 				C8C90DF01C11AD6F00FE924E /* String+Indexing.swift in Sources */,
+				C863670C1C19DA8A00AF83EF /* UIImage+SolidColor.swift in Sources */,
 				C8C90DF11C11AD6F00FE924E /* String+Localized.swift in Sources */,
 				C8C90DE81C11AD6F00FE924E /* PaddedLabel.swift in Sources */,
 				C8C90DE61C11AD6F00FE924E /* LoadingView.swift in Sources */,
