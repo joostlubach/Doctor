@@ -42,8 +42,17 @@ public class PushButton: Button {
   public var loading = false {
     didSet {
       loadingView.hidden = !loading
-      titleLabel?.hidden = loading
-      imageView?.hidden = loading
+      enabled = !loading
+
+      if loading != oldValue {
+        if loading {
+          titleLabel?.removeFromSuperview()
+          imageView?.removeFromSuperview()
+        } else {
+          if let v = titleLabel { addSubview(v) }
+          if let v = imageView { addSubview(v) }
+        }
+      }
     }
   }
 
@@ -97,7 +106,7 @@ public class PushButton: Button {
 
   public override var enabled: Bool {
     didSet {
-      alpha = enabled ? 1.0 : 0.6
+      reflectStyle()
       updateInterspacing()
     }
   }
@@ -113,7 +122,7 @@ public class PushButton: Button {
   public let innerShadowView = InnerShadowView()
 
   /// The loading view containing the loading indicator.
-  public let loadingView = LoadingView(activityIndicatorStyle: .WhiteLarge)
+  public let loadingView = LoadingView(activityIndicatorStyle: .White)
 
   /// The loading indicator.
   public let loadingIndicator = UIActivityIndicatorView(activityIndicatorStyle: .White)
@@ -181,10 +190,14 @@ public class PushButton: Button {
 
   /// Updates the background color to reflect the current state.
   private func reflectStyle() {
+    alpha = 1.0
+
     if selected {
       selectedStyle?.applyTo(self)
     } else if highlighted {
       highlightedStyle?.applyTo(self)
+    } else if !enabled && !loading {
+      alpha = 0.6
     } else {
       normalStyle?.applyTo(self)
     }
