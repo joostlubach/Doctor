@@ -29,6 +29,8 @@ class ModalActivityIndicatorView: ThemedView {
   override func setup() {
     addSubview(activityIndicatorView)
     activityIndicatorView.startAnimating()
+
+    clipsToBounds = false
   }
 
   override func sizeThatFits(size: CGSize) -> CGSize {
