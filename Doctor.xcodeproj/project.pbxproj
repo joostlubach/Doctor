@@ -18,7 +18,7 @@
 		C8C90DC21C11AD6A00FE924E /* Doctor.h in Headers */ = {isa = PBXBuildFile; fileRef = C8C90DC01C11AD6A00FE924E /* Doctor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8C90DDE1C11AD6F00FE924E /* Array+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC41C11AD6F00FE924E /* Array+Sample.swift */; };
 		C8C90DDF1C11AD6F00FE924E /* CGContext+InnerShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC51C11AD6F00FE924E /* CGContext+InnerShadow.swift */; };
-		C8C90DE01C11AD6F00FE924E /* CGContext+RoundedRects.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC61C11AD6F00FE924E /* CGContext+RoundedRects.swift */; };
+		C8C90DE01C11AD6F00FE924E /* CGContext+RoundedRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC61C11AD6F00FE924E /* CGContext+RoundedRect.swift */; };
 		C8C90DE11C11AD6F00FE924E /* CGFloat+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC71C11AD6F00FE924E /* CGFloat+Utility.swift */; };
 		C8C90DE21C11AD6F00FE924E /* CGSize+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC81C11AD6F00FE924E /* CGSize+Utility.swift */; };
 		C8C90DE31C11AD6F00FE924E /* Growl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC91C11AD6F00FE924E /* Growl.swift */; };
@@ -47,6 +47,7 @@
 		C8C90E051C11AE4900FE924E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C90E021C11AE4900FE924E /* SwiftyJSON.framework */; };
 		C8C90E081C11AF1B00FE924E /* Tailor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C90E071C11AF1B00FE924E /* Tailor.framework */; };
 		C8D194291C147F5E00EB686D /* UIView+RenderToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D194281C147F5E00EB686D /* UIView+RenderToImage.swift */; };
+		C8E0403D1C1C4741001EC4C9 /* CGPoint+Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0403C1C1C4741001EC4C9 /* CGPoint+Arithmetic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +64,7 @@
 		C8C90DC01C11AD6A00FE924E /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
 		C8C90DC41C11AD6F00FE924E /* Array+Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Sample.swift"; sourceTree = "<group>"; };
 		C8C90DC51C11AD6F00FE924E /* CGContext+InnerShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+InnerShadow.swift"; sourceTree = "<group>"; };
-		C8C90DC61C11AD6F00FE924E /* CGContext+RoundedRects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+RoundedRects.swift"; sourceTree = "<group>"; };
+		C8C90DC61C11AD6F00FE924E /* CGContext+RoundedRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+RoundedRect.swift"; sourceTree = "<group>"; };
 		C8C90DC71C11AD6F00FE924E /* CGFloat+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Utility.swift"; sourceTree = "<group>"; };
 		C8C90DC81C11AD6F00FE924E /* CGSize+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Utility.swift"; sourceTree = "<group>"; };
 		C8C90DC91C11AD6F00FE924E /* Growl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Growl.swift; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 		C8C90E021C11AE4900FE924E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		C8C90E071C11AF1B00FE924E /* Tailor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tailor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D194281C147F5E00EB686D /* UIView+RenderToImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RenderToImage.swift"; sourceTree = "<group>"; };
+		C8E0403C1C1C4741001EC4C9 /* CGPoint+Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Arithmetic.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			children = (
 				C8C90DC71C11AD6F00FE924E /* CGFloat+Utility.swift */,
 				C8C90DC81C11AD6F00FE924E /* CGSize+Utility.swift */,
+				C8E0403C1C1C4741001EC4C9 /* CGPoint+Arithmetic.swift */,
 			);
 			name = Geometry;
 			sourceTree = "<group>";
@@ -227,7 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				C8C90DC51C11AD6F00FE924E /* CGContext+InnerShadow.swift */,
-				C8C90DC61C11AD6F00FE924E /* CGContext+RoundedRects.swift */,
+				C8C90DC61C11AD6F00FE924E /* CGContext+RoundedRect.swift */,
 				C863670B1C19DA8A00AF83EF /* UIImage+SolidColor.swift */,
 			);
 			name = Drawing;
@@ -341,7 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8A493FE1C1AF4E10028D7B0 /* NSDate+JSON.swift in Sources */,
-				C8C90DE01C11AD6F00FE924E /* CGContext+RoundedRects.swift in Sources */,
+				C8C90DE01C11AD6F00FE924E /* CGContext+RoundedRect.swift in Sources */,
 				C8C90DE21C11AD6F00FE924E /* CGSize+Utility.swift in Sources */,
 				C8C90DF71C11AD6F00FE924E /* WeakSet.swift in Sources */,
 				C8C90DEB1C11AD6F00FE924E /* PushHandling.swift in Sources */,
@@ -356,6 +359,7 @@
 				C8D194291C147F5E00EB686D /* UIView+RenderToImage.swift in Sources */,
 				C83680651C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift in Sources */,
 				C8C90DEE1C11AD6F00FE924E /* Sequence+Predicates.swift in Sources */,
+				C8E0403D1C1C4741001EC4C9 /* CGPoint+Arithmetic.swift in Sources */,
 				C8C90DF51C11AD6F00FE924E /* UIColor+Hex.swift in Sources */,
 				C8340FF11C15C0AF000DF6CD /* Timer.swift in Sources */,
 				C8C90DEC1C11AD6F00FE924E /* RemoteImageCache.swift in Sources */,
