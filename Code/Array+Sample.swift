@@ -7,10 +7,12 @@ public extension Array {
     var allIndices = [Int](indices)
     var sample = [Element]()
 
+    srand(UInt32(NSDate().timeIntervalSinceReferenceDate))
+
     for _ in 0..<size {
       if allIndices.count > 0 {
-        let index = allIndices.removeAtIndex(random() % allIndices.count)
-        sample.append(self[index])
+        let index = Int(arc4random_uniform(UInt32(allIndices.count)))
+        sample.append(self[allIndices.removeAtIndex(index)])
       }
     }
 
@@ -19,7 +21,7 @@ public extension Array {
 
   /// Returns a random element from this collection.
   func sample() -> Array.Element {
-    let index = random() % count
+    let index = Int(arc4random_uniform(UInt32(count)))
     return self[index]
   }
 
