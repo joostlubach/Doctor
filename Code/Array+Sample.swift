@@ -8,7 +8,8 @@ public extension Array {
     var sample = [Element]()
 
     for _ in 0..<size {
-      if let index = allIndices.popLast() {
+      if allIndices.count > 0 {
+        let index = allIndices.removeAtIndex(random() % allIndices.count)
         sample.append(self[index])
       }
     }
