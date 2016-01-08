@@ -11,6 +11,7 @@
 		C8340FF11C15C0AF000DF6CD /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF01C15C0AF000DF6CD /* Timer.swift */; };
 		C8340FF31C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */; };
 		C83680651C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83680641C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift */; };
+		C860104B1C3FEA6800779B99 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C860104A1C3FEA6800779B99 /* TextView.swift */; };
 		C863670C1C19DA8A00AF83EF /* UIImage+SolidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C863670B1C19DA8A00AF83EF /* UIImage+SolidColor.swift */; };
 		C8A493FC1C1AE3920028D7B0 /* UIView+Bounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A493FB1C1AE3920028D7B0 /* UIView+Bounce.swift */; };
 		C8A493FE1C1AF4E10028D7B0 /* NSDate+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A493FD1C1AF4E10028D7B0 /* NSDate+JSON.swift */; };
@@ -55,6 +56,7 @@
 		C8340FF01C15C0AF000DF6CD /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BrightFutures+ErrorConversion.swift"; sourceTree = "<group>"; };
 		C83680641C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
+		C860104A1C3FEA6800779B99 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		C863670B1C19DA8A00AF83EF /* UIImage+SolidColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+SolidColor.swift"; sourceTree = "<group>"; };
 		C8A493FB1C1AE3920028D7B0 /* UIView+Bounce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Bounce.swift"; sourceTree = "<group>"; };
 		C8A493FD1C1AF4E10028D7B0 /* NSDate+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+JSON.swift"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				C8C90DD31C11AD6F00FE924E /* RemoteImageView.swift */,
 				C8C90DD21C11AD6F00FE924E /* RemoteImageCache.swift */,
 				C8C90DD81C11AD6F00FE924E /* TextField.swift */,
+				C860104A1C3FEA6800779B99 /* TextView.swift */,
 				C8C90DC91C11AD6F00FE924E /* Growl.swift */,
 				C8340FEE1C15BB82000DF6CD /* ModalActivityIndicator.swift */,
 				C83680641C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift */,
@@ -348,6 +351,7 @@
 				C8C90DE21C11AD6F00FE924E /* CGSize+Utility.swift in Sources */,
 				C8C90DF71C11AD6F00FE924E /* WeakSet.swift in Sources */,
 				C8C90DEB1C11AD6F00FE924E /* PushHandling.swift in Sources */,
+				C860104B1C3FEA6800779B99 /* TextView.swift in Sources */,
 				C8C90DF21C11AD6F00FE924E /* TextField.swift in Sources */,
 				C8C90DE41C11AD6F00FE924E /* IconButton.swift in Sources */,
 				C8A493FC1C1AE3920028D7B0 /* UIView+Bounce.swift in Sources */,
