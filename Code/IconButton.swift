@@ -25,6 +25,12 @@ public class IconButton: Button {
     }
   }
 
+  public override var selected: Bool {
+    didSet {
+      reflectState()
+    }
+  }
+
   public var iconName: String? {
     didSet {
       if let name = iconName {
@@ -53,6 +59,12 @@ public class IconButton: Button {
     }
   }
 
+  public var selectedColor = UIColor.whiteColor() {
+    didSet {
+      reflectState()
+    }
+  }
+
   private func reflectIcon() {
     let image = icon?.imageWithRenderingMode(.AlwaysTemplate)
     setImage(image, forState: .Normal)
@@ -60,6 +72,8 @@ public class IconButton: Button {
 
   private func reflectState() {
     if selected {
+      tintColor = selectedColor
+    } else if highlighted {
       tintColor = highlightedColor
     } else {
       tintColor = normalColor
