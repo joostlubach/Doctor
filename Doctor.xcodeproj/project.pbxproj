@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C810D8A91C44581300B35AB0 /* String+Split.swift in Sources */ = {isa = PBXBuildFile; fileRef = C810D8A81C44581300B35AB0 /* String+Split.swift */; };
 		C8340FEF1C15BB82000DF6CD /* ModalActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FEE1C15BB82000DF6CD /* ModalActivityIndicator.swift */; };
 		C8340FF11C15C0AF000DF6CD /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF01C15C0AF000DF6CD /* Timer.swift */; };
 		C8340FF31C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C810D8A81C44581300B35AB0 /* String+Split.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Split.swift"; sourceTree = "<group>"; };
 		C8340FEE1C15BB82000DF6CD /* ModalActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalActivityIndicator.swift; sourceTree = "<group>"; };
 		C8340FF01C15C0AF000DF6CD /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BrightFutures+ErrorConversion.swift"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				C8C90DD51C11AD6F00FE924E /* String+Format.swift */,
 				C8C90DD61C11AD6F00FE924E /* String+Indexing.swift */,
 				C8C90DD71C11AD6F00FE924E /* String+Localized.swift */,
+				C810D8A81C44581300B35AB0 /* String+Split.swift */,
 			);
 			name = String;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				C8C90DEB1C11AD6F00FE924E /* PushHandling.swift in Sources */,
 				C860104B1C3FEA6800779B99 /* TextView.swift in Sources */,
 				C8C90DF21C11AD6F00FE924E /* TextField.swift in Sources */,
+				C810D8A91C44581300B35AB0 /* String+Split.swift in Sources */,
 				C8C90DE41C11AD6F00FE924E /* IconButton.swift in Sources */,
 				C8A493FC1C1AE3920028D7B0 /* UIView+Bounce.swift in Sources */,
 				C8A494001C1AF69D0028D7B0 /* NSDate+ISO8601.swift in Sources */,
