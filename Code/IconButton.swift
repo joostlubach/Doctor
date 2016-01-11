@@ -19,6 +19,10 @@ public class IconButton: Button {
     fatalError("IconButton does not support coding")
   }
 
+  public override func setup() {
+    adjustsImageWhenHighlighted = false
+  }
+
   public override var highlighted: Bool {
     didSet {
       reflectState()
