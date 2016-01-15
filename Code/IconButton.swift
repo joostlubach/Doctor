@@ -19,10 +19,6 @@ public class IconButton: Button {
     fatalError("IconButton does not support coding")
   }
 
-  public override func setup() {
-    adjustsImageWhenHighlighted = false
-  }
-
   public override var highlighted: Bool {
     didSet {
       reflectState()
@@ -32,6 +28,23 @@ public class IconButton: Button {
   public override var selected: Bool {
     didSet {
       reflectState()
+    }
+  }
+
+  public var loading = false {
+    didSet {
+      loadingView.hidden = !loading
+      enabled = !loading
+
+      if loading != oldValue {
+        if loading {
+          titleLabel?.removeFromSuperview()
+          imageView?.removeFromSuperview()
+        } else {
+          if let v = titleLabel { addSubview(v) }
+          if let v = imageView { addSubview(v) }
+        }
+      }
     }
   }
 
@@ -83,5 +96,23 @@ public class IconButton: Button {
       tintColor = normalColor
     }
   }
-  
+
+  /// The loading view containing the loading indicator.
+  public let loadingView = LoadingView(activityIndicatorStyle: .Gray)
+
+  public override func setup() {
+    addSubview(loadingView)
+
+    adjustsImageWhenHighlighted = false
+
+    loadingView.hidden = true
+    loadingView.backgroundColor = UIColor.clearColor()
+  }
+
+  public override func layoutSubviews() {
+    super.layoutSubviews()
+
+    loadingView.fillSuperview()
+  }
+
 }

@@ -124,9 +124,6 @@ public class PushButton: Button {
   /// The loading view containing the loading indicator.
   public let loadingView = LoadingView(activityIndicatorStyle: .White)
 
-  /// The loading indicator.
-  public let loadingIndicator = UIActivityIndicatorView(activityIndicatorStyle: .White)
-
   public override func setup() {
     cornerRadius = layer.cornerRadius
     adjustsImageWhenHighlighted = false
@@ -138,7 +135,6 @@ public class PushButton: Button {
     innerShadowView.userInteractionEnabled = false
 
     addSubview(loadingView)
-    loadingView.addSubview(loadingIndicator)
     loadingView.userInteractionEnabled = false
 
     loadingView.hidden = true
@@ -167,7 +163,7 @@ public class PushButton: Button {
   public override func sizeThatFits(size: CGSize) -> CGSize {
     var fittingSize = super.sizeThatFits(size)
 
-    if imageForState(state) != nil {
+    if imageForState(state) != nil && titleForState(state) != nil {
       fittingSize.width += interSpacing
     }
     return fittingSize
