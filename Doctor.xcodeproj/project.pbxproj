@@ -14,7 +14,9 @@
 		C83680651C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83680641C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift */; };
 		C860104B1C3FEA6800779B99 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C860104A1C3FEA6800779B99 /* TextView.swift */; };
 		C860104E1C400B1D00779B99 /* Sequence+Grouping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C860104D1C400B1D00779B99 /* Sequence+Grouping.swift */; };
+		C86326871C4A871200500280 /* Comparable+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86326861C4A871200500280 /* Comparable+Clamp.swift */; };
 		C863670C1C19DA8A00AF83EF /* UIImage+SolidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C863670B1C19DA8A00AF83EF /* UIImage+SolidColor.swift */; };
+		C8971DDF1C4995AE009656F8 /* Sequence+Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8971DDE1C4995AE009656F8 /* Sequence+Tuple.swift */; };
 		C89745CF1C43D310003DFDFD /* Emptyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89745CE1C43D310003DFDFD /* Emptyable.swift */; };
 		C8A493FC1C1AE3920028D7B0 /* UIView+Bounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A493FB1C1AE3920028D7B0 /* UIView+Bounce.swift */; };
 		C8A493FE1C1AF4E10028D7B0 /* NSDate+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A493FD1C1AF4E10028D7B0 /* NSDate+JSON.swift */; };
@@ -62,7 +64,9 @@
 		C83680641C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
 		C860104A1C3FEA6800779B99 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		C860104D1C400B1D00779B99 /* Sequence+Grouping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+Grouping.swift"; sourceTree = "<group>"; };
+		C86326861C4A871200500280 /* Comparable+Clamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+Clamp.swift"; sourceTree = "<group>"; };
 		C863670B1C19DA8A00AF83EF /* UIImage+SolidColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+SolidColor.swift"; sourceTree = "<group>"; };
+		C8971DDE1C4995AE009656F8 /* Sequence+Tuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+Tuple.swift"; sourceTree = "<group>"; };
 		C89745CE1C43D310003DFDFD /* Emptyable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emptyable.swift; sourceTree = "<group>"; };
 		C8A493FB1C1AE3920028D7B0 /* UIView+Bounce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Bounce.swift"; sourceTree = "<group>"; };
 		C8A493FD1C1AF4E10028D7B0 /* NSDate+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+JSON.swift"; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 				C8C90DD41C11AD6F00FE924E /* Sequence+Predicates.swift */,
 				C8C90DC41C11AD6F00FE924E /* Array+Sample.swift */,
 				C860104D1C400B1D00779B99 /* Sequence+Grouping.swift */,
+				C8971DDE1C4995AE009656F8 /* Sequence+Tuple.swift */,
 			);
 			name = Sequence;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				C8C90DD91C11AD6F00FE924E /* UIBarButtonItem+DefaultItems.swift */,
 				C8C90DDC1C11AD6F00FE924E /* UIViewController+Alerts.swift */,
 				C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */,
+				C86326861C4A871200500280 /* Comparable+Clamp.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -363,11 +369,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C86326871C4A871200500280 /* Comparable+Clamp.swift in Sources */,
 				C8A493FE1C1AF4E10028D7B0 /* NSDate+JSON.swift in Sources */,
 				C8C90DE01C11AD6F00FE924E /* CGContext+RoundedRect.swift in Sources */,
 				C8C90DE21C11AD6F00FE924E /* CGSize+Utility.swift in Sources */,
 				C8C90DF71C11AD6F00FE924E /* WeakSet.swift in Sources */,
 				C8C90DEB1C11AD6F00FE924E /* PushHandling.swift in Sources */,
+				C8971DDF1C4995AE009656F8 /* Sequence+Tuple.swift in Sources */,
 				C860104B1C3FEA6800779B99 /* TextView.swift in Sources */,
 				C8C90DF21C11AD6F00FE924E /* TextField.swift in Sources */,
 				C810D8A91C44581300B35AB0 /* String+Split.swift in Sources */,
