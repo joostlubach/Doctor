@@ -3,9 +3,12 @@ import Foundation
 public extension String {
 
   /// Obtains the character at the given integer index.
-  subscript(int: Int) -> Character {
-    let index = startIndex.advancedBy(int)
-    return self[index]
+  subscript(var index: Int) -> Character {
+    if index < 0 {
+      index += characters.count
+    }
+
+    return self[startIndex.advancedBy(index)]
   }
 
   /// Obtains the substring at the given integer index range.

@@ -1,9 +1,9 @@
 import Foundation
 
-extension String {
+public extension String {
 
   /// Shortcut to `componentsSeparatorByString`.
-  func split(separator: String) -> [String] {
+  func splitWithSeparator(separator: String) -> [String] {
     return componentsSeparatedByString(separator)
   }
 
