@@ -6,10 +6,12 @@ public class InnerShadowView: View {
 
   public override init() {
     super.init()
+    opaque = false
     contentMode = .Redraw
   }
   public override init(frame: CGRect) {
     super.init(frame: frame)
+    opaque = false
     contentMode = .Redraw
   }
   public required init?(coder: NSCoder) {
