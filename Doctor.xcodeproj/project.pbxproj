@@ -12,6 +12,7 @@
 		C8340FF11C15C0AF000DF6CD /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF01C15C0AF000DF6CD /* Timer.swift */; };
 		C8340FF31C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */; };
 		C83680651C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83680641C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift */; };
+		C84E4F1E1C4AFD1F005A1AC3 /* Array+Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E4F1D1C4AFD1F005A1AC3 /* Array+Shuffle.swift */; };
 		C860104B1C3FEA6800779B99 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C860104A1C3FEA6800779B99 /* TextView.swift */; };
 		C860104E1C400B1D00779B99 /* Sequence+Grouping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C860104D1C400B1D00779B99 /* Sequence+Grouping.swift */; };
 		C86326871C4A871200500280 /* Comparable+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86326861C4A871200500280 /* Comparable+Clamp.swift */; };
@@ -62,6 +63,7 @@
 		C8340FF01C15C0AF000DF6CD /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BrightFutures+ErrorConversion.swift"; sourceTree = "<group>"; };
 		C83680641C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
+		C84E4F1D1C4AFD1F005A1AC3 /* Array+Shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Shuffle.swift"; sourceTree = "<group>"; };
 		C860104A1C3FEA6800779B99 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		C860104D1C400B1D00779B99 /* Sequence+Grouping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+Grouping.swift"; sourceTree = "<group>"; };
 		C86326861C4A871200500280 /* Comparable+Clamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+Clamp.swift"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				C8C90DC41C11AD6F00FE924E /* Array+Sample.swift */,
 				C860104D1C400B1D00779B99 /* Sequence+Grouping.swift */,
 				C8971DDE1C4995AE009656F8 /* Sequence+Tuple.swift */,
+				C84E4F1D1C4AFD1F005A1AC3 /* Array+Shuffle.swift */,
 			);
 			name = Sequence;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				C8C90DF31C11AD6F00FE924E /* UIBarButtonItem+DefaultItems.swift in Sources */,
 				C8C90DE11C11AD6F00FE924E /* CGFloat+Utility.swift in Sources */,
 				C8C90DF01C11AD6F00FE924E /* String+Indexing.swift in Sources */,
+				C84E4F1E1C4AFD1F005A1AC3 /* Array+Shuffle.swift in Sources */,
 				C863670C1C19DA8A00AF83EF /* UIImage+SolidColor.swift in Sources */,
 				C8C90DF11C11AD6F00FE924E /* String+Localized.swift in Sources */,
 				C8C90DE81C11AD6F00FE924E /* PaddedLabel.swift in Sources */,
@@ -514,7 +518,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -534,7 +537,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

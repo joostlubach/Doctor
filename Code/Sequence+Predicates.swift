@@ -3,7 +3,7 @@ import Foundation
 public extension SequenceType {
 
   /// Determines whether all elements in this sequence match the given predicate.
-  func all(predicate: (Self.Generator.Element) throws -> Bool) rethrows -> Bool {
+  func all(@noescape predicate: (Self.Generator.Element) throws -> Bool) rethrows -> Bool {
     for element in self {
       if try !predicate(element) {
         return false
@@ -14,7 +14,7 @@ public extension SequenceType {
   }
 
   /// Determines whether any element in this sequence matches the given predicate.
-  func any(predicate: (Self.Generator.Element) throws -> Bool) rethrows -> Bool {
+  func any(@noescape predicate: (Self.Generator.Element) throws -> Bool) rethrows -> Bool {
     for element in self {
       if try predicate(element) {
         return true
@@ -25,12 +25,12 @@ public extension SequenceType {
   }
 
   /// Determines whether none of the elements in this sequence match the given predicate.
-  func none(predicate: (Self.Generator.Element) throws -> Bool) rethrows -> Bool {
+  func none(@noescape predicate: (Self.Generator.Element) throws -> Bool) rethrows -> Bool {
     return try !any(predicate)
   }
 
   /// Finds the first element in this sequence matching the given predicate.
-  func findFirst(predicate: (Self.Generator.Element) throws -> Bool) rethrows -> Self.Generator.Element? {
+  func findFirst(@noescape predicate: (Self.Generator.Element) throws -> Bool) rethrows -> Self.Generator.Element? {
     for element in self {
       if try predicate(element) {
         return element
@@ -41,7 +41,7 @@ public extension SequenceType {
   }
 
   /// Finds the first element in this sequence matching the given predicate.
-  func findLast(predicate: (Self.Generator.Element) throws -> Bool) rethrows -> Self.Generator.Element? {
+  func findLast(@noescape predicate: (Self.Generator.Element) throws -> Bool) rethrows -> Self.Generator.Element? {
     for element in self.reverse() {
       if try predicate(element) {
         return element

@@ -4,6 +4,14 @@ public extension SequenceType {
 
   /// Creates a tuple from this sequence. Useful in destructuring.
   func tuple() -> (Self.Generator.Element, Self.Generator.Element) {
+    let (first, last) = optionalTuple()
+    precondition(first != nil && last != nil, "Sequence must contain at least two elements")
+
+    return (first!, last!)
+  }
+
+  /// Creates a tuple from this sequence. Useful in destructuring.
+  func optionalTuple() -> (Self.Generator.Element?, Self.Generator.Element?) {
     var first: Self.Generator.Element?
     var last: Self.Generator.Element?
 
@@ -17,8 +25,7 @@ public extension SequenceType {
       }
     }
 
-    precondition(first != nil && last != nil, "Sequence must contain at least two elements")
-    return (first!, last!)
+    return (first, last)
   }
 
 }

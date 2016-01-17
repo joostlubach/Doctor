@@ -22,7 +22,7 @@ extension Dictionary: Emptyable {
   }
 }
 
-extension Optional where Wrapped: Emptyable {
+public extension Optional where Wrapped: Emptyable {
 
   /// Determines whether the value is nil or 'empty'.
   var empty: Bool {
