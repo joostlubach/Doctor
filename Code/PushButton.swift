@@ -11,11 +11,14 @@ public class PushButton: Button {
     /// The icon is on the right. The text is placed in the remaining space.
     case Right
 
-    /// The icon is directly to the left of the text, with the given spacing.
+    /// The icon is directly to the left of the text, with some spacing inbetween.
     case LeftOfText(spacing: CGFloat)
 
-    /// The icon is directly to the right of the text, with the given spacing.
+    /// The icon is directly to the right of the text, with some spacing inbetween.
     case RightOfText(spacing: CGFloat)
+
+    /// The icon is above the text, with some spacing inbetween.
+    case AboveText(spacing: CGFloat)
   }
 
   /// The placement of the icon.
@@ -151,6 +154,9 @@ public class PushButton: Button {
     loadingView.hidden = true
     loadingView.backgroundColor = UIColor.clearColor()
     loadingView.layer.cornerRadius = cornerRadius
+
+    super.titleEdgeInsets = UIEdgeInsetsZero
+    super.imageEdgeInsets = UIEdgeInsetsZero
   }
 
   public override func layoutSubviews() {
@@ -160,20 +166,45 @@ public class PushButton: Button {
   }
 
   public override func sizeThatFits(size: CGSize) -> CGSize {
-    var fittingSize = super.sizeThatFits(size)
+    let image = imageForState(state)
+    let title = titleForState(state)
 
-    if imageForState(state) != nil && titleForState(state) != nil {
-      switch iconPlacement {
-      case let .LeftOfText(spacing: spacing):
-        fittingSize.width += spacing
-      case let .RightOfText(spacing: spacing):
-        fittingSize.width += spacing
-      default:
-        break
-      }
+    let titleSize: CGSize, imageSize: CGSize
+    if let title = title, let font = titleLabel?.font {
+      titleSize = title.sizeWithAttributes([NSFontAttributeName: font])
+    } else {
+      titleSize = CGSizeZero
+    }
+    if let image = image {
+      imageSize = image.size
+    } else {
+      imageSize = CGSizeZero
     }
 
-    return fittingSize
+    var size = CGSize()
+
+    switch iconPlacement {
+    case let .LeftOfText(spacing: spacing):
+      size.width = imageSize.width + spacing + titleSize.width
+      size.height = max(imageSize.height, titleSize.height)
+    case let .RightOfText(spacing: spacing):
+      size.width = imageSize.width + spacing + titleSize.width
+      size.height = max(imageSize.height, titleSize.height)
+    case let .AboveText(spacing: spacing):
+      size.width = max(imageSize.width, titleSize.width)
+      size.height = imageSize.height + spacing + titleSize.height
+    case .Left, .Right:
+      size.width = imageSize.width + titleSize.width
+      size.height = max(imageSize.height, titleSize.height)
+    }
+
+    size.width += contentEdgeInsets.left + contentEdgeInsets.right
+    size.height += contentEdgeInsets.top + contentEdgeInsets.bottom
+
+    size.width = ceil(size.width)
+    size.height = ceil(size.height)
+
+    return size
   }
 
   public override func imageRectForContentRect(contentRect: CGRect) -> CGRect {
@@ -200,6 +231,9 @@ public class PushButton: Button {
     case let .RightOfText(spacing: spacing):
       rect.origin.x = (contentRect.midX + (titleSize.width + spacing + imageSize.width) / 2 - imageSize.width)
       rect.origin.y = contentRect.midY - rect.height / 2
+    case let .AboveText(spacing: spacing):
+      rect.origin.x = contentRect.midX - rect.width / 2
+      rect.origin.y = contentRect.midY - (titleSize.height + spacing + imageSize.height) / 2
     }
 
     return rect
@@ -216,6 +250,9 @@ public class PushButton: Button {
     var rect = CGRect()
     rect.size = titleSize
 
+    print("\(title): Content size: \(contentRect.size)")
+    print("\(title): Text size: \(rect.size)")
+
 
     switch iconPlacement {
     case .Left:
@@ -225,13 +262,16 @@ public class PushButton: Button {
       rect.origin.x = (contentRect.width - imageSize.width) / 2
       rect.origin.y = contentRect.midY - rect.height / 2
     case let .LeftOfText(spacing: spacing):
-      rect.size.width = titleSize.width
-      rect.origin.x = (contentRect.midX - (titleSize.width + spacing + imageSize.width) / 2 + imageSize.width)
+      rect.origin.x = (contentRect.midX - (titleSize.width + spacing + imageSize.width) / 2 + imageSize.width + spacing)
       rect.origin.y = contentRect.midY - rect.height / 2
     case let .RightOfText(spacing: spacing):
-      rect.size.width = titleSize.width
       rect.origin.x = (contentRect.midX - (titleSize.width + spacing + imageSize.width) / 2)
       rect.origin.y = contentRect.midY - rect.height / 2
+    case let .AboveText(spacing: spacing):
+      // super.titleRectForContentRect subtracts the image width plus a constant width, which is incorrect
+      rect.size.width += imageSize.width + 6
+      rect.origin.x = contentRect.midX - rect.width / 2
+      rect.origin.y = (contentRect.midY - (titleSize.height + spacing + imageSize.height) / 2 + imageSize.height + spacing)
     }
 
     return rect
