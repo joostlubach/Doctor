@@ -8,6 +8,10 @@ public func -(left: CGPoint, right: CGPoint) -> CGPoint {
   return CGPoint(x: left.x - right.x, y: left.y - right.y)
 }
 
+public func *(left: CGPoint, right: CGFloat) -> CGPoint {
+  return CGPoint(x: left.x * right, y: left.y * right)
+}
+
 public func +=(inout left: CGPoint, right: CGPoint) -> CGPoint {
   left = left + right
   return left
@@ -15,6 +19,11 @@ public func +=(inout left: CGPoint, right: CGPoint) -> CGPoint {
 
 public func -=(inout left: CGPoint, right: CGPoint) -> CGPoint {
   left = left - right
+  return left
+}
+
+public func *=(inout left: CGPoint, right: CGFloat) -> CGPoint {
+  left = left * right
   return left
 }
 
@@ -28,6 +37,13 @@ public extension CGPoint {
       x: x * (1 - at) + otherPoint.x * at,
       y: y * (1 - at) + otherPoint.y * at
     )
+  }
+
+  /// Calculates the euclidian distance between this point and the given point.
+  func distanceTo(point: CGPoint) -> CGFloat {
+    let dx = point.x - x
+    let dy = point.y - y
+    return sqrt(dx * dx + dy * dy)
   }
 
 }
