@@ -4,10 +4,24 @@ import Tailor
 /// A push button with loading indicator.
 public class PushButton: Button {
 
-  /// The space between the button icon and text.
-  public var interSpacing: CGFloat = 8 {
+  public enum IconPlacement {
+    /// The icon is on the left. The text is placed in the remaining space.
+    case Left
+
+    /// The icon is on the right. The text is placed in the remaining space.
+    case Right
+
+    /// The icon is directly to the left of the text, with the given spacing.
+    case LeftOfText(spacing: CGFloat)
+
+    /// The icon is directly to the right of the text, with the given spacing.
+    case RightOfText(spacing: CGFloat)
+  }
+
+  /// The placement of the icon.
+  public var iconPlacement = IconPlacement.Left {
     didSet {
-      updateInterspacing()
+      setNeedsLayout()
     }
   }
 
@@ -100,21 +114,18 @@ public class PushButton: Button {
   public override var highlighted: Bool {
     didSet {
       reflectStyle()
-      updateInterspacing()
     }
   }
 
   public override var enabled: Bool {
     didSet {
       reflectStyle()
-      updateInterspacing()
     }
   }
 
   public override var selected: Bool {
     didSet {
       reflectStyle()
-      updateInterspacing()
     }
   }
 
@@ -140,8 +151,6 @@ public class PushButton: Button {
     loadingView.hidden = true
     loadingView.backgroundColor = UIColor.clearColor()
     loadingView.layer.cornerRadius = cornerRadius
-
-    updateInterspacing()
   }
 
   public override func layoutSubviews() {
@@ -150,38 +159,82 @@ public class PushButton: Button {
     loadingView.fillSuperview()
   }
 
-  public override func setImage(image: UIImage?, forState state: UIControlState) {
-    super.setImage(image, forState: state)
-    updateInterspacing()
-  }
-
-  public override func setTitle(title: String?, forState state: UIControlState) {
-    super.setTitle(title, forState: state)
-    updateInterspacing()
-  }
-
   public override func sizeThatFits(size: CGSize) -> CGSize {
     var fittingSize = super.sizeThatFits(size)
 
     if imageForState(state) != nil && titleForState(state) != nil {
-      fittingSize.width += interSpacing
+      switch iconPlacement {
+      case let .LeftOfText(spacing: spacing):
+        fittingSize.width += spacing
+      case let .RightOfText(spacing: spacing):
+        fittingSize.width += spacing
+      default:
+        break
+      }
     }
+
     return fittingSize
   }
 
-  /// Updates the interspacing between the image and the text.
-  private func updateInterspacing() {
-    if imageForState(state) != nil && titleForState(state) != nil {
-      imageEdgeInsets.left = -interSpacing / 2
-      imageEdgeInsets.right = interSpacing / 2
-      titleEdgeInsets.left = interSpacing / 2
-      titleEdgeInsets.right = -interSpacing / 2
-    } else {
-      imageEdgeInsets.left = 0
-      imageEdgeInsets.right = 0
-      titleEdgeInsets.left = 0
-      titleEdgeInsets.right = 0
+  public override func imageRectForContentRect(contentRect: CGRect) -> CGRect {
+    guard titleForState(state) != nil else {
+      return super.imageRectForContentRect(contentRect)
     }
+
+    let titleSize = super.titleRectForContentRect(contentRect).size
+    let imageSize = super.imageRectForContentRect(contentRect).size
+
+    var rect = CGRect()
+    rect.size = imageSize
+
+    switch iconPlacement {
+    case .Left:
+      rect.origin.x = contentRect.minX
+      rect.origin.y = contentRect.midY - rect.height / 2
+    case .Right:
+      rect.origin.x = contentRect.maxX - rect.width
+      rect.origin.y = contentRect.midY - rect.height / 2
+    case let .LeftOfText(spacing: spacing):
+      rect.origin.x = (contentRect.midX - (titleSize.width + spacing + imageSize.width) / 2)
+      rect.origin.y = contentRect.midY - rect.height / 2
+    case let .RightOfText(spacing: spacing):
+      rect.origin.x = (contentRect.midX + (titleSize.width + spacing + imageSize.width) / 2 - imageSize.width)
+      rect.origin.y = contentRect.midY - rect.height / 2
+    }
+
+    return rect
+  }
+
+  public override func titleRectForContentRect(contentRect: CGRect) -> CGRect {
+    guard imageForState(state) != nil else {
+      return super.titleRectForContentRect(contentRect)
+    }
+
+    let titleSize = super.titleRectForContentRect(contentRect).size
+    let imageSize = super.imageRectForContentRect(contentRect).size
+
+    var rect = CGRect()
+    rect.size = titleSize
+
+
+    switch iconPlacement {
+    case .Left:
+      rect.origin.x = imageSize.width + (contentRect.width - imageSize.width) / 2
+      rect.origin.y = contentRect.midY - rect.height / 2
+    case .Right:
+      rect.origin.x = (contentRect.width - imageSize.width) / 2
+      rect.origin.y = contentRect.midY - rect.height / 2
+    case let .LeftOfText(spacing: spacing):
+      rect.size.width = titleSize.width
+      rect.origin.x = (contentRect.midX - (titleSize.width + spacing + imageSize.width) / 2 + imageSize.width)
+      rect.origin.y = contentRect.midY - rect.height / 2
+    case let .RightOfText(spacing: spacing):
+      rect.size.width = titleSize.width
+      rect.origin.x = (contentRect.midX - (titleSize.width + spacing + imageSize.width) / 2)
+      rect.origin.y = contentRect.midY - rect.height / 2
+    }
+
+    return rect
   }
 
   /// Updates the background color to reflect the current state.
