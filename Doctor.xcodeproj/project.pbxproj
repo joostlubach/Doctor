@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C810D8A91C44581300B35AB0 /* String+Split.swift in Sources */ = {isa = PBXBuildFile; fileRef = C810D8A81C44581300B35AB0 /* String+Split.swift */; };
+		C82482B51C4FC93600B01C07 /* Array+Predicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82482B41C4FC93600B01C07 /* Array+Predicates.swift */; };
 		C8340FEF1C15BB82000DF6CD /* ModalActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FEE1C15BB82000DF6CD /* ModalActivityIndicator.swift */; };
 		C8340FF11C15C0AF000DF6CD /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF01C15C0AF000DF6CD /* Timer.swift */; };
 		C8340FF31C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		C810D8A81C44581300B35AB0 /* String+Split.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Split.swift"; sourceTree = "<group>"; };
+		C82482B41C4FC93600B01C07 /* Array+Predicates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Predicates.swift"; sourceTree = "<group>"; };
 		C8340FEE1C15BB82000DF6CD /* ModalActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalActivityIndicator.swift; sourceTree = "<group>"; };
 		C8340FF01C15C0AF000DF6CD /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BrightFutures+ErrorConversion.swift"; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				C860104D1C400B1D00779B99 /* Sequence+Grouping.swift */,
 				C8971DDE1C4995AE009656F8 /* Sequence+Tuple.swift */,
 				C84E4F1D1C4AFD1F005A1AC3 /* Array+Shuffle.swift */,
+				C82482B41C4FC93600B01C07 /* Array+Predicates.swift */,
 			);
 			name = Sequence;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				C8C90DEB1C11AD6F00FE924E /* PushHandling.swift in Sources */,
 				C8971DDF1C4995AE009656F8 /* Sequence+Tuple.swift in Sources */,
 				C860104B1C3FEA6800779B99 /* TextView.swift in Sources */,
+				C82482B51C4FC93600B01C07 /* Array+Predicates.swift in Sources */,
 				C8C90DF21C11AD6F00FE924E /* TextField.swift in Sources */,
 				C810D8A91C44581300B35AB0 /* String+Split.swift in Sources */,
 				C8C90DE41C11AD6F00FE924E /* IconButton.swift in Sources */,
