@@ -269,10 +269,6 @@ public class PushButton: Button {
     var rect = CGRect()
     rect.size = titleSize
 
-    print("\(title): Content size: \(contentRect.size)")
-    print("\(title): Text size: \(rect.size)")
-
-
     switch iconPlacement {
     case .Left:
       rect.origin.x = imageSize.width + (contentRect.width - imageSize.width) / 2
