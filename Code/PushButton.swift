@@ -105,6 +105,14 @@ public class PushButton: Button {
     }
   }
 
+  /// The font for the button title.
+  public var titleFont: UIFont? {
+    didSet {
+      titleLabel?.font = titleFont
+      setNeedsLayout()
+    }
+  }
+
   public var cornerRadius: CGFloat {
     get { return layer.cornerRadius }
     set {
@@ -155,6 +163,8 @@ public class PushButton: Button {
     loadingView.backgroundColor = UIColor.clearColor()
     loadingView.layer.cornerRadius = cornerRadius
 
+    self.titleFont = titleLabel?.font
+
     super.titleEdgeInsets = UIEdgeInsetsZero
     super.imageEdgeInsets = UIEdgeInsetsZero
   }
@@ -165,12 +175,12 @@ public class PushButton: Button {
     loadingView.fillSuperview()
   }
 
-  public override func sizeThatFits(size: CGSize) -> CGSize {
+  private var titleAndImageSize: (CGSize, CGSize) {
     let image = imageForState(state)
     let title = titleForState(state)
 
     let titleSize: CGSize, imageSize: CGSize
-    if let title = title, let font = titleLabel?.font {
+    if let title = title, let font = titleFont {
       titleSize = title.sizeWithAttributes([NSFontAttributeName: font])
     } else {
       titleSize = CGSizeZero
@@ -181,21 +191,32 @@ public class PushButton: Button {
       imageSize = CGSizeZero
     }
 
+    return (titleSize, imageSize)
+  }
+
+  public override func sizeThatFits(size: CGSize) -> CGSize {
+    let (titleSize, imageSize) = titleAndImageSize
+
     var size = CGSize()
 
-    switch iconPlacement {
-    case let .LeftOfText(spacing: spacing):
-      size.width = imageSize.width + spacing + titleSize.width
-      size.height = max(imageSize.height, titleSize.height)
-    case let .RightOfText(spacing: spacing):
-      size.width = imageSize.width + spacing + titleSize.width
-      size.height = max(imageSize.height, titleSize.height)
-    case let .AboveText(spacing: spacing):
-      size.width = max(imageSize.width, titleSize.width)
-      size.height = imageSize.height + spacing + titleSize.height
-    case .Left, .Right:
+    if titleForState(state) != nil && imageForState(state) != nil {
+      switch iconPlacement {
+      case let .LeftOfText(spacing: spacing):
+        size.width = imageSize.width + spacing + titleSize.width
+        size.height = max(imageSize.height, titleSize.height)
+      case let .RightOfText(spacing: spacing):
+        size.width = imageSize.width + spacing + titleSize.width
+        size.height = max(imageSize.height, titleSize.height)
+      case let .AboveText(spacing: spacing):
+        size.width = max(imageSize.width, titleSize.width)
+        size.height = imageSize.height + spacing + titleSize.height
+      case .Left, .Right:
+        size.width = imageSize.width + titleSize.width
+        size.height = max(imageSize.height, titleSize.height)
+      }
+    } else {
       size.width = imageSize.width + titleSize.width
-      size.height = max(imageSize.height, titleSize.height)
+      size.height = imageSize.height + titleSize.height
     }
 
     size.width += contentEdgeInsets.left + contentEdgeInsets.right
@@ -212,8 +233,7 @@ public class PushButton: Button {
       return super.imageRectForContentRect(contentRect)
     }
 
-    let titleSize = super.titleRectForContentRect(contentRect).size
-    let imageSize = super.imageRectForContentRect(contentRect).size
+    let (titleSize, imageSize) = titleAndImageSize
 
     var rect = CGRect()
     rect.size = imageSize
@@ -244,8 +264,7 @@ public class PushButton: Button {
       return super.titleRectForContentRect(contentRect)
     }
 
-    let titleSize = super.titleRectForContentRect(contentRect).size
-    let imageSize = super.imageRectForContentRect(contentRect).size
+    let (titleSize, imageSize) = titleAndImageSize
 
     var rect = CGRect()
     rect.size = titleSize
@@ -268,8 +287,6 @@ public class PushButton: Button {
       rect.origin.x = (contentRect.midX - (titleSize.width + spacing + imageSize.width) / 2)
       rect.origin.y = contentRect.midY - rect.height / 2
     case let .AboveText(spacing: spacing):
-      // super.titleRectForContentRect subtracts the image width plus a constant width, which is incorrect
-      rect.size.width += imageSize.width + 6
       rect.origin.x = contentRect.midX - rect.width / 2
       rect.origin.y = (contentRect.midY - (titleSize.height + spacing + imageSize.height) / 2 + imageSize.height + spacing)
     }
@@ -300,6 +317,11 @@ extension PushButton {
   public override var style_foregroundColor: UIColor? {
     get { return foregroundColor }
     set { foregroundColor = newValue }
+  }
+
+  public override var style_font: UIFont? {
+    get { return titleFont }
+    set { titleFont = newValue }
   }
 
   public override var style_cornerRadius: CGFloat {
