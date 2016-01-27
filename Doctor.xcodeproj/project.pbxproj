@@ -9,21 +9,14 @@
 /* Begin PBXBuildFile section */
 		C810D8A91C44581300B35AB0 /* String+Split.swift in Sources */ = {isa = PBXBuildFile; fileRef = C810D8A81C44581300B35AB0 /* String+Split.swift */; };
 		C82482B51C4FC93600B01C07 /* Array+Predicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82482B41C4FC93600B01C07 /* Array+Predicates.swift */; };
-		C8340FEF1C15BB82000DF6CD /* ModalActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FEE1C15BB82000DF6CD /* ModalActivityIndicator.swift */; };
 		C8340FF11C15C0AF000DF6CD /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF01C15C0AF000DF6CD /* Timer.swift */; };
-		C8340FF31C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */; };
-		C83680651C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83680641C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift */; };
-		C83BC4E41C4D5D14007C8D3E /* ThresholdedPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83BC4E31C4D5D14007C8D3E /* ThresholdedPanGestureRecognizer.swift */; };
 		C83BC4E61C4D5DB5007C8D3E /* Enum+Comparisons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83BC4E51C4D5DB5007C8D3E /* Enum+Comparisons.swift */; };
 		C84E4F1E1C4AFD1F005A1AC3 /* Array+Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E4F1D1C4AFD1F005A1AC3 /* Array+Shuffle.swift */; };
-		C860104B1C3FEA6800779B99 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C860104A1C3FEA6800779B99 /* TextView.swift */; };
 		C860104E1C400B1D00779B99 /* Sequence+Grouping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C860104D1C400B1D00779B99 /* Sequence+Grouping.swift */; };
 		C86326871C4A871200500280 /* Comparable+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86326861C4A871200500280 /* Comparable+Clamp.swift */; };
 		C863670C1C19DA8A00AF83EF /* UIImage+SolidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C863670B1C19DA8A00AF83EF /* UIImage+SolidColor.swift */; };
 		C8971DDF1C4995AE009656F8 /* Sequence+Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8971DDE1C4995AE009656F8 /* Sequence+Tuple.swift */; };
 		C89745CF1C43D310003DFDFD /* Emptyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89745CE1C43D310003DFDFD /* Emptyable.swift */; };
-		C8A493FC1C1AE3920028D7B0 /* UIView+Bounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A493FB1C1AE3920028D7B0 /* UIView+Bounce.swift */; };
-		C8A493FE1C1AF4E10028D7B0 /* NSDate+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A493FD1C1AF4E10028D7B0 /* NSDate+JSON.swift */; };
 		C8A494001C1AF69D0028D7B0 /* NSDate+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A493FF1C1AF69D0028D7B0 /* NSDate+ISO8601.swift */; };
 		C8C90DC21C11AD6A00FE924E /* Doctor.h in Headers */ = {isa = PBXBuildFile; fileRef = C8C90DC01C11AD6A00FE924E /* Doctor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8C90DDE1C11AD6F00FE924E /* Array+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC41C11AD6F00FE924E /* Array+Sample.swift */; };
@@ -31,33 +24,39 @@
 		C8C90DE01C11AD6F00FE924E /* CGContext+RoundedRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC61C11AD6F00FE924E /* CGContext+RoundedRect.swift */; };
 		C8C90DE11C11AD6F00FE924E /* CGFloat+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC71C11AD6F00FE924E /* CGFloat+Utility.swift */; };
 		C8C90DE21C11AD6F00FE924E /* CGSize+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC81C11AD6F00FE924E /* CGSize+Utility.swift */; };
-		C8C90DE31C11AD6F00FE924E /* Growl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC91C11AD6F00FE924E /* Growl.swift */; };
-		C8C90DE41C11AD6F00FE924E /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DCA1C11AD6F00FE924E /* IconButton.swift */; };
-		C8C90DE51C11AD6F00FE924E /* InnerShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DCB1C11AD6F00FE924E /* InnerShadowView.swift */; };
-		C8C90DE61C11AD6F00FE924E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DCC1C11AD6F00FE924E /* LoadingView.swift */; };
 		C8C90DE71C11AD6F00FE924E /* NSData+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DCD1C11AD6F00FE924E /* NSData+Hex.swift */; };
-		C8C90DE81C11AD6F00FE924E /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DCE1C11AD6F00FE924E /* PaddedLabel.swift */; };
-		C8C90DE91C11AD6F00FE924E /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DCF1C11AD6F00FE924E /* PushButton.swift */; };
-		C8C90DEA1C11AD6F00FE924E /* PushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD01C11AD6F00FE924E /* PushHandler.swift */; };
-		C8C90DEB1C11AD6F00FE924E /* PushHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD11C11AD6F00FE924E /* PushHandling.swift */; };
-		C8C90DEC1C11AD6F00FE924E /* RemoteImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD21C11AD6F00FE924E /* RemoteImageCache.swift */; };
-		C8C90DED1C11AD6F00FE924E /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD31C11AD6F00FE924E /* RemoteImageView.swift */; };
 		C8C90DEE1C11AD6F00FE924E /* Sequence+Predicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD41C11AD6F00FE924E /* Sequence+Predicates.swift */; };
 		C8C90DEF1C11AD6F00FE924E /* String+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD51C11AD6F00FE924E /* String+Format.swift */; };
 		C8C90DF01C11AD6F00FE924E /* String+Indexing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD61C11AD6F00FE924E /* String+Indexing.swift */; };
 		C8C90DF11C11AD6F00FE924E /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD71C11AD6F00FE924E /* String+Localized.swift */; };
-		C8C90DF21C11AD6F00FE924E /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD81C11AD6F00FE924E /* TextField.swift */; };
 		C8C90DF31C11AD6F00FE924E /* UIBarButtonItem+DefaultItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD91C11AD6F00FE924E /* UIBarButtonItem+DefaultItems.swift */; };
 		C8C90DF41C11AD6F00FE924E /* UIColor+Adjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DDA1C11AD6F00FE924E /* UIColor+Adjustments.swift */; };
 		C8C90DF51C11AD6F00FE924E /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DDB1C11AD6F00FE924E /* UIColor+Hex.swift */; };
 		C8C90DF61C11AD6F00FE924E /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DDC1C11AD6F00FE924E /* UIViewController+Alerts.swift */; };
 		C8C90DF71C11AD6F00FE924E /* WeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DDD1C11AD6F00FE924E /* WeakSet.swift */; };
-		C8C90E031C11AE4900FE924E /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C90E001C11AE4900FE924E /* BrightFutures.framework */; };
-		C8C90E041C11AE4900FE924E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C90E011C11AE4900FE924E /* Result.framework */; };
-		C8C90E051C11AE4900FE924E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C90E021C11AE4900FE924E /* SwiftyJSON.framework */; };
-		C8C90E081C11AF1B00FE924E /* Tailor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C90E071C11AF1B00FE924E /* Tailor.framework */; };
-		C8D194291C147F5E00EB686D /* UIView+RenderToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D194281C147F5E00EB686D /* UIView+RenderToImage.swift */; };
 		C8E0403D1C1C4741001EC4C9 /* CGPoint+Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0403C1C1C4741001EC4C9 /* CGPoint+Arithmetic.swift */; };
+		C8F398291C56B6C1005347FA /* Tailor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F398281C56B6C1005347FA /* Tailor.framework */; };
+		C8F398321C56B71C005347FA /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DCF1C11AD6F00FE924E /* PushButton.swift */; };
+		C8F398331C56B71C005347FA /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DCE1C11AD6F00FE924E /* PaddedLabel.swift */; };
+		C8F398341C56B71C005347FA /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DCA1C11AD6F00FE924E /* IconButton.swift */; };
+		C8F398351C56B71C005347FA /* InnerShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DCB1C11AD6F00FE924E /* InnerShadowView.swift */; };
+		C8F398361C56B71C005347FA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DCC1C11AD6F00FE924E /* LoadingView.swift */; };
+		C8F398381C56B71C005347FA /* RemoteImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD21C11AD6F00FE924E /* RemoteImageCache.swift */; };
+		C8F398391C56B71C005347FA /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD81C11AD6F00FE924E /* TextField.swift */; };
+		C8F3983A1C56B71C005347FA /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C860104A1C3FEA6800779B99 /* TextView.swift */; };
+		C8F3983B1C56B71C005347FA /* Growl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DC91C11AD6F00FE924E /* Growl.swift */; };
+		C8F3983C1C56B71C005347FA /* ModalActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FEE1C15BB82000DF6CD /* ModalActivityIndicator.swift */; };
+		C8F3983D1C56B71C005347FA /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83680641C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift */; };
+		C8F3983E1C56B71C005347FA /* UIView+Bounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A493FB1C1AE3920028D7B0 /* UIView+Bounce.swift */; };
+		C8F3983F1C56B71C005347FA /* ThresholdedPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83BC4E31C4D5D14007C8D3E /* ThresholdedPanGestureRecognizer.swift */; };
+		C8F398441C56C2B6005347FA /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F398411C56C2B6005347FA /* BrightFutures.framework */; };
+		C8F398451C56C2B6005347FA /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F398421C56C2B6005347FA /* Result.framework */; };
+		C8F398461C56C2B6005347FA /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F398431C56C2B6005347FA /* SwiftyJSON.framework */; };
+		C8F398471C56C2BE005347FA /* BrightFutures+ErrorConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8340FF21C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift */; };
+		C8F398481C56C2C1005347FA /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD31C11AD6F00FE924E /* RemoteImageView.swift */; };
+		C8F398491C56C2C6005347FA /* NSDate+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A493FD1C1AF4E10028D7B0 /* NSDate+JSON.swift */; };
+		C8F3984A1C56C2C8005347FA /* PushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD01C11AD6F00FE924E /* PushHandler.swift */; };
+		C8F3984B1C56C2CA005347FA /* PushHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C90DD11C11AD6F00FE924E /* PushHandling.swift */; };
 		C8F3CDD61C4D395D00A39875 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F3CDD51C4D395D00A39875 /* Math.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,12 +108,12 @@
 		C8C90DDB1C11AD6F00FE924E /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		C8C90DDC1C11AD6F00FE924E /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		C8C90DDD1C11AD6F00FE924E /* WeakSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakSet.swift; sourceTree = "<group>"; };
-		C8C90E001C11AE4900FE924E /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = ../Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
-		C8C90E011C11AE4900FE924E /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		C8C90E021C11AE4900FE924E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
-		C8C90E071C11AF1B00FE924E /* Tailor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tailor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D194281C147F5E00EB686D /* UIView+RenderToImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RenderToImage.swift"; sourceTree = "<group>"; };
 		C8E0403C1C1C4741001EC4C9 /* CGPoint+Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Arithmetic.swift"; sourceTree = "<group>"; };
+		C8F398281C56B6C1005347FA /* Tailor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tailor.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Getaway-cescokimovsacffsyrlvacwgaosd/Build/Products/Debug-iphoneos/Tailor.framework"; sourceTree = "<group>"; };
+		C8F398411C56C2B6005347FA /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = ../Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
+		C8F398421C56C2B6005347FA /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		C8F398431C56C2B6005347FA /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		C8F3CDD51C4D395D00A39875 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,10 +122,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8C90E081C11AF1B00FE924E /* Tailor.framework in Frameworks */,
-				C8C90E031C11AE4900FE924E /* BrightFutures.framework in Frameworks */,
-				C8C90E041C11AE4900FE924E /* Result.framework in Frameworks */,
-				C8C90E051C11AE4900FE924E /* SwiftyJSON.framework in Frameworks */,
+				C8F398461C56C2B6005347FA /* SwiftyJSON.framework in Frameworks */,
+				C8F398451C56C2B6005347FA /* Result.framework in Frameworks */,
+				C8F398291C56B6C1005347FA /* Tailor.framework in Frameworks */,
+				C8F398441C56C2B6005347FA /* BrightFutures.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,10 +288,10 @@
 		C8C90E061C11AE4D00FE924E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C8C90E071C11AF1B00FE924E /* Tailor.framework */,
-				C8C90E001C11AE4900FE924E /* BrightFutures.framework */,
-				C8C90E011C11AE4900FE924E /* Result.framework */,
-				C8C90E021C11AE4900FE924E /* SwiftyJSON.framework */,
+				C8F398411C56C2B6005347FA /* BrightFutures.framework */,
+				C8F398421C56C2B6005347FA /* Result.framework */,
+				C8F398431C56C2B6005347FA /* SwiftyJSON.framework */,
+				C8F398281C56B6C1005347FA /* Tailor.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -385,52 +384,51 @@
 			buildActionMask = 2147483647;
 			files = (
 				C86326871C4A871200500280 /* Comparable+Clamp.swift in Sources */,
-				C8A493FE1C1AF4E10028D7B0 /* NSDate+JSON.swift in Sources */,
+				C8F3983D1C56B71C005347FA /* ForceTouchGestureRecognizer.swift in Sources */,
+				C8F398481C56C2C1005347FA /* RemoteImageView.swift in Sources */,
 				C8C90DE01C11AD6F00FE924E /* CGContext+RoundedRect.swift in Sources */,
+				C8F398491C56C2C6005347FA /* NSDate+JSON.swift in Sources */,
+				C8F398351C56B71C005347FA /* InnerShadowView.swift in Sources */,
 				C8C90DE21C11AD6F00FE924E /* CGSize+Utility.swift in Sources */,
+				C8F3983E1C56B71C005347FA /* UIView+Bounce.swift in Sources */,
 				C8C90DF71C11AD6F00FE924E /* WeakSet.swift in Sources */,
-				C8C90DEB1C11AD6F00FE924E /* PushHandling.swift in Sources */,
 				C8971DDF1C4995AE009656F8 /* Sequence+Tuple.swift in Sources */,
-				C860104B1C3FEA6800779B99 /* TextView.swift in Sources */,
+				C8F398321C56B71C005347FA /* PushButton.swift in Sources */,
+				C8F3983A1C56B71C005347FA /* TextView.swift in Sources */,
 				C82482B51C4FC93600B01C07 /* Array+Predicates.swift in Sources */,
-				C8C90DF21C11AD6F00FE924E /* TextField.swift in Sources */,
+				C8F398331C56B71C005347FA /* PaddedLabel.swift in Sources */,
 				C810D8A91C44581300B35AB0 /* String+Split.swift in Sources */,
-				C8C90DE41C11AD6F00FE924E /* IconButton.swift in Sources */,
-				C8A493FC1C1AE3920028D7B0 /* UIView+Bounce.swift in Sources */,
 				C8A494001C1AF69D0028D7B0 /* NSDate+ISO8601.swift in Sources */,
+				C8F3983C1C56B71C005347FA /* ModalActivityIndicator.swift in Sources */,
 				C89745CF1C43D310003DFDFD /* Emptyable.swift in Sources */,
 				C8C90DDF1C11AD6F00FE924E /* CGContext+InnerShadow.swift in Sources */,
+				C8F3984A1C56C2C8005347FA /* PushHandler.swift in Sources */,
+				C8F398341C56B71C005347FA /* IconButton.swift in Sources */,
 				C83BC4E61C4D5DB5007C8D3E /* Enum+Comparisons.swift in Sources */,
+				C8F398361C56B71C005347FA /* LoadingView.swift in Sources */,
+				C8F398391C56B71C005347FA /* TextField.swift in Sources */,
 				C8C90DE71C11AD6F00FE924E /* NSData+Hex.swift in Sources */,
-				C8C90DE31C11AD6F00FE924E /* Growl.swift in Sources */,
 				C8C90DF61C11AD6F00FE924E /* UIViewController+Alerts.swift in Sources */,
-				C8D194291C147F5E00EB686D /* UIView+RenderToImage.swift in Sources */,
-				C83680651C19AA9C002C1D88 /* ForceTouchGestureRecognizer.swift in Sources */,
 				C8C90DEE1C11AD6F00FE924E /* Sequence+Predicates.swift in Sources */,
 				C860104E1C400B1D00779B99 /* Sequence+Grouping.swift in Sources */,
 				C8E0403D1C1C4741001EC4C9 /* CGPoint+Arithmetic.swift in Sources */,
 				C8C90DF51C11AD6F00FE924E /* UIColor+Hex.swift in Sources */,
 				C8340FF11C15C0AF000DF6CD /* Timer.swift in Sources */,
-				C8C90DEC1C11AD6F00FE924E /* RemoteImageCache.swift in Sources */,
-				C8340FEF1C15BB82000DF6CD /* ModalActivityIndicator.swift in Sources */,
-				C8C90DE51C11AD6F00FE924E /* InnerShadowView.swift in Sources */,
 				C8C90DF41C11AD6F00FE924E /* UIColor+Adjustments.swift in Sources */,
 				C8C90DDE1C11AD6F00FE924E /* Array+Sample.swift in Sources */,
-				C8C90DED1C11AD6F00FE924E /* RemoteImageView.swift in Sources */,
-				C8340FF31C15C6BD000DF6CD /* BrightFutures+ErrorConversion.swift in Sources */,
 				C8C90DF31C11AD6F00FE924E /* UIBarButtonItem+DefaultItems.swift in Sources */,
+				C8F3984B1C56C2CA005347FA /* PushHandling.swift in Sources */,
 				C8C90DE11C11AD6F00FE924E /* CGFloat+Utility.swift in Sources */,
 				C8C90DF01C11AD6F00FE924E /* String+Indexing.swift in Sources */,
 				C8F3CDD61C4D395D00A39875 /* Math.swift in Sources */,
 				C84E4F1E1C4AFD1F005A1AC3 /* Array+Shuffle.swift in Sources */,
 				C863670C1C19DA8A00AF83EF /* UIImage+SolidColor.swift in Sources */,
+				C8F3983F1C56B71C005347FA /* ThresholdedPanGestureRecognizer.swift in Sources */,
 				C8C90DF11C11AD6F00FE924E /* String+Localized.swift in Sources */,
-				C83BC4E41C4D5D14007C8D3E /* ThresholdedPanGestureRecognizer.swift in Sources */,
-				C8C90DE81C11AD6F00FE924E /* PaddedLabel.swift in Sources */,
-				C8C90DE61C11AD6F00FE924E /* LoadingView.swift in Sources */,
 				C8C90DEF1C11AD6F00FE924E /* String+Format.swift in Sources */,
-				C8C90DEA1C11AD6F00FE924E /* PushHandler.swift in Sources */,
-				C8C90DE91C11AD6F00FE924E /* PushButton.swift in Sources */,
+				C8F398381C56B71C005347FA /* RemoteImageCache.swift in Sources */,
+				C8F3983B1C56B71C005347FA /* Growl.swift in Sources */,
+				C8F398471C56C2BE005347FA /* BrightFutures+ErrorConversion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
